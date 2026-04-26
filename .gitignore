@@ -1,6 +1,21 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
+# Visual Studio
+.vs/
+*.vsidx
 
+# Build outputs
+bin/
+obj/
+
+# User files
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Project files
 BrevardMapper.API/appsettings.json
 BrevardMapper.API/appsettings.Development.json

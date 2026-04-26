@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Brevard GIS Dashboard</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.29/"></script>
+
+    <style>
+        html, body, #viewDiv {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+
+    <script>
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/Graphic"
+], function(Map, MapView, Graphic) {
+
+  const map = new Map({
+    basemap: "streets-navigation-vector"
+  });
+
+  const view = new MapView({
+    container: "viewDiv",
+    map: map,
+    center: [-80.6077, 28.3922],
+    zoom: 10
+  });
+
+  // CONNECT TO YOUR .NET API
+    fetch("https://localhost:7021/api/requests/map")
+        .then(res => res.json())
+        .then(data => {
+
+            data.forEach(p => {
+
+                const point = {
+                    type: "point",
+                    longitude: p.longitude,
+                    latitude: p.latitude
+                };
+
+                const graphic = new Graphic({
+                    geometry: point,
+                    symbol: {
+                        type: "simple-marker",
+                        color: "red",
+                        size: 10
+                    },
+                    attributes: p,
+                    popupTemplate: {
+                        title: "{title}",
+                        content: "{description}"
+                    }
+                });
+
+                view.graphics.add(graphic);
+            });
+
+        });
+
+    });
+    </script>
+
+</body>
+</html>

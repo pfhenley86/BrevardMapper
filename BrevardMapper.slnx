@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="BrevardGIS.Web/BrevardGIS.Web.csproj" Id="2c446ddb-47b2-4f81-839e-41d5b1d237aa" />
   <Project Path="BrevardMapper.API/BrevardMapper.API.csproj" />
 </Solution>

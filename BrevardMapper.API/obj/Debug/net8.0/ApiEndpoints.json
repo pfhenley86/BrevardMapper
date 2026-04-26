@@ -18,5 +18,15 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BrevardMapper.API.Controllers.RequestsController",
+    "Method": "GetMapPoints",
+    "RelativePath": "api/Requests/map",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

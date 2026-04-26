@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrevardMapper.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c56d349d91de8aae521c7d9699baa27e9c3c68f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e0fe0ff26ac76248ad8317d3c4e4da10387c56c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrevardMapper.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrevardMapper.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
