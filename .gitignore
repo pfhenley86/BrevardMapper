@@ -3,3 +3,4 @@
 ################################################################################
 
 BrevardMapper.API/appsettings.json
+BrevardMapper.API/appsettings.Development.json
