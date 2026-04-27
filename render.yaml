@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: brevardmapper-api
+    runtime: dotnet
+    repo: https://github.com/YOUR_USERNAME/BrevardMapper
+    branch: main
+    rootDir: BrevardMapper.API
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/BrevardMapper.API.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
